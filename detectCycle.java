@@ -31,24 +31,29 @@ public class Solution {
         ListNode runner = head;
         boolean isCycle = false; 
 
+        // move walker ahead by one if not at end of the list 
+        // Is there a cycle or not ?
         while (walker != null && runner != null) {
             walker = walker.next;
 
+            // Check if the runner is at the end of the list 
             // Move the runner two nodes at a time
             if (runner.next == null) return null;
             runner = runner.next.next
 
+            // if they colide there is a cycle 
             if (walker == runner) {
                 isCycle = true;
                 break;
             }
         }
 
-        // If there is not cycle, nothing further needed. Otherwise, find the node
+        // If there is not cycle, nothing further needed. Otherwise, find the node the cycle started on 
         if(isCylce)
             return null;
         else {
             walker = head;
+            // Move pointers together untill they hit each other 
             // the next time Walker and Runner colide will be where the cycle begins
             while (walker != runner) {
                 walker = walker.next;
