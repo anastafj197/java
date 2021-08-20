@@ -7,7 +7,7 @@ public class listNode {
 }
 */
 
-// LeetCode problem 24. Swap Nodes in Pairs
+// LeetCode problem 24. Swap Nodes in Pairs ( Java Solution )
 
 class Solution {
     public ListNode swapPairs(ListNode head) {

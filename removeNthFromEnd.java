@@ -6,11 +6,10 @@ public class listNode {
     ListNode() {}
     ListNode(int val) { this.val = val; }
     ListNode(int val, ListNode next) { this.val = val; this.next = next; } 
-
 }
 */
 
-// LeetCode problem 19. Remove Nth Node From End of List
+// LeetCode problem 19. Remove Nth Node From End of List ( Java Solution )
 
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n ) {
