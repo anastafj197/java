@@ -16,6 +16,7 @@ class Solution {
         ListNode after_head = new ListNode(0);
         ListNode after_runner = after_head;
 
+        // Step through entire list moving nodes around by modifying the pointers
         while (head != null) {
             if (head.val < x) {
                before_runner.next = head;
@@ -28,6 +29,7 @@ class Solution {
             head = head.next;
         }
 
+        // Clean up pointers and use dummy node to access head
         after_runner.next = null;
         before_runner.next = after_runner.next;
         return before_head.next; 
